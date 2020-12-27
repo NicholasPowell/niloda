@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nilo.ExtensionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-26T14:32:34" hostname="Nicks-Mac-mini.local" time="0.014">
+  <properties/>
+  <testcase name="testVersionExtension()" classname="com.nilo.ExtensionTests" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

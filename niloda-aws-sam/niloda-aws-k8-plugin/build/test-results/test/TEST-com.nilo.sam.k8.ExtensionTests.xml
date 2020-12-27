@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nilo.sam.k8.ExtensionTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-12-17T14:42:36" hostname="Nicks-Mac-mini.local" time="0.046">
+  <properties/>
+  <testcase name="testStripNonAlphaLower(String, String)[1]" classname="com.nilo.sam.k8.ExtensionTests" time="0.027"/>
+  <testcase name="testStripNonAlphaLower(String, String)[2]" classname="com.nilo.sam.k8.ExtensionTests" time="0.001"/>
+  <testcase name="testStripNonAlphaLower(String, String)[3]" classname="com.nilo.sam.k8.ExtensionTests" time="0.001"/>
+  <testcase name="testStripNonAlphaLower(String, String)[4]" classname="com.nilo.sam.k8.ExtensionTests" time="0.001"/>
+  <testcase name="testStripNonAlphaLower(String, String)[5]" classname="com.nilo.sam.k8.ExtensionTests" time="0.001"/>
+  <testcase name="testStripNonAlphaLower(String, String)[6]" classname="com.nilo.sam.k8.ExtensionTests" time="0.001"/>
+  <testcase name="testStripNonAlphaLower(String, String)[7]" classname="com.nilo.sam.k8.ExtensionTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/niloda-aws-cloud-stack" name="niloda-aws-cloud-stack">
+                <projects>
+                  <project path="$PROJECT_DIR$/niloda-aws-cloud-stack" />
+                  <project path="$PROJECT_DIR$/niloda-aws-cloud-stack/niloda-aws-cloud-stack-plugin" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/niloda-aws-sam" name="niloda-aws-sam">
+                <projects>
+                  <project path="$PROJECT_DIR$/niloda-aws-sam" />
+                  <project path="$PROJECT_DIR$/niloda-aws-sam/niloda-aws-k8-plugin" />
+                  <project path="$PROJECT_DIR$/niloda-aws-sam/niloda-aws-lambda-plugin" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/niloda-container-boot" name="niloda-container-boot">
+                <projects>
+                  <project path="$PROJECT_DIR$/niloda-container-boot" />
+                  <project path="$PROJECT_DIR$/niloda-container-boot/containerized-boot-base" />
+                  <project path="$PROJECT_DIR$/niloda-container-boot/containerized-boot-plugin" />
+                  <project path="$PROJECT_DIR$/niloda-container-boot/containerized-boot-test" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/niloda-dependency-management" name="niloda-dependency-management">
+                <projects>
+                  <project path="$PROJECT_DIR$/niloda-dependency-management" />
+                  <project path="$PROJECT_DIR$/niloda-dependency-management/dependency-management" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/5.5/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/niloda-aws-cloud-stack" />
+            <option value="$PROJECT_DIR$/niloda-aws-cloud-stack/niloda-aws-cloud-stack-plugin" />
+            <option value="$PROJECT_DIR$/niloda-aws-sam" />
+            <option value="$PROJECT_DIR$/niloda-aws-sam/niloda-aws-k8-plugin" />
+            <option value="$PROJECT_DIR$/niloda-aws-sam/niloda-aws-lambda-plugin" />
+            <option value="$PROJECT_DIR$/niloda-container-boot" />
+            <option value="$PROJECT_DIR$/niloda-container-boot/containerized-boot-base" />
+            <option value="$PROJECT_DIR$/niloda-container-boot/containerized-boot-plugin" />
+            <option value="$PROJECT_DIR$/niloda-container-boot/containerized-boot-test" />
+            <option value="$PROJECT_DIR$/niloda-dependency-management" />
+            <option value="$PROJECT_DIR$/niloda-dependency-management/dependency-management" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

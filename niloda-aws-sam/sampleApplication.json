@@ -1,0 +1,160 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "sampleApplication": {
+            "Type": "AWS::ElasticBeanstalk::Application",
+            "Properties": {
+                "Description": "AWS Elastic Beanstalk Sample Application"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "4ed24527-cd0f-4dc4-bf4e-292fee92955a"
+                }
+            }
+        },
+        "sampleApplicationVersion": {
+            "Type": "AWS::ElasticBeanstalk::ApplicationVersion",
+            "Properties": {
+                "ApplicationName": {
+                    "Ref": "sampleApplication"
+                },
+                "Description": "AWS ElasticBeanstalk Sample Application Version",
+                "SourceBundle": {
+                    "S3Bucket": "gateway-ebs",
+                    "S3Key": "gateway.jar"
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "c1d88b30-86f8-49ba-b621-1f022c31fd8b"
+                }
+            }
+        },
+        "sampleConfigurationTemplate": {
+            "Type": "AWS::ElasticBeanstalk::ConfigurationTemplate",
+            "Properties": {
+                "ApplicationName": {
+                    "Ref": "sampleApplication"
+                },
+                "Description": "AWS ElasticBeanstalk Sample Configuration Template",
+                "OptionSettings": [
+                    {
+                        "Namespace": "aws:autoscaling:asg",
+                        "OptionName": "MinSize",
+                        "Value": "1"
+                    },
+                    {
+                        "Namespace": "aws:autoscaling:asg",
+                        "OptionName": "MaxSize",
+                        "Value": "1"
+                    },
+                    {
+                        "Namespace": "aws:elasticbeanstalk:environment",
+                        "OptionName": "EnvironmentType",
+                        "Value": "LoadBalanced"
+                    }
+                ],
+                "SolutionStackName": "64bit Amazon Linux 2018.03 v3.4.0 running Tomcat 8.5 Java 8"
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "913f4355-2df8-4c2e-bd2b-c3b5c55b1b04"
+                }
+            }
+        },
+        "sampleEnvironment": {
+            "Type": "AWS::ElasticBeanstalk::Environment",
+            "Properties": {
+                "ApplicationName": {
+                    "Ref": "sampleApplication"
+                },
+                "Description": "AWS ElasticBeanstalk Sample Environment",
+                "TemplateName": {
+                    "Ref": "sampleConfigurationTemplate"
+                },
+                "VersionLabel": {
+                    "Ref": "sampleApplicationVersion"
+                }
+            },
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "d2a0b30f-ff08-4ee2-8fc4-50fd06aee2e8"
+                }
+            }
+        }
+    },
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "4ed24527-cd0f-4dc4-bf4e-292fee92955a": {
+                "size": {
+                    "width": 330,
+                    "height": 330
+                },
+                "position": {
+                    "x": 250,
+                    "y": -20
+                },
+                "z": 1,
+                "embeds": [
+                    "913f4355-2df8-4c2e-bd2b-c3b5c55b1b04",
+                    "c1d88b30-86f8-49ba-b621-1f022c31fd8b",
+                    "d2a0b30f-ff08-4ee2-8fc4-50fd06aee2e8"
+                ]
+            },
+            "913f4355-2df8-4c2e-bd2b-c3b5c55b1b04": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 280,
+                    "y": 40
+                },
+                "z": 2,
+                "parent": "4ed24527-cd0f-4dc4-bf4e-292fee92955a",
+                "embeds": [],
+                "iscontainedinside": [
+                    "4ed24527-cd0f-4dc4-bf4e-292fee92955a",
+                    "4ed24527-cd0f-4dc4-bf4e-292fee92955a"
+                ]
+            },
+            "c1d88b30-86f8-49ba-b621-1f022c31fd8b": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 400,
+                    "y": 40
+                },
+                "z": 2,
+                "parent": "4ed24527-cd0f-4dc4-bf4e-292fee92955a",
+                "embeds": [],
+                "iscontainedinside": [
+                    "4ed24527-cd0f-4dc4-bf4e-292fee92955a",
+                    "4ed24527-cd0f-4dc4-bf4e-292fee92955a"
+                ]
+            },
+            "d2a0b30f-ff08-4ee2-8fc4-50fd06aee2e8": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 280,
+                    "y": 160
+                },
+                "z": 2,
+                "parent": "4ed24527-cd0f-4dc4-bf4e-292fee92955a",
+                "embeds": [],
+                "isassociatedwith": [
+                    "913f4355-2df8-4c2e-bd2b-c3b5c55b1b04"
+                ],
+                "iscontainedinside": [
+                    "4ed24527-cd0f-4dc4-bf4e-292fee92955a",
+                    "4ed24527-cd0f-4dc4-bf4e-292fee92955a"
+                ]
+            }
+        }
+    }
+}
