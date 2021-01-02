@@ -16,7 +16,6 @@ class AwsClusterPlugin : Plugin<Project> {
 
             val generatedDir = "${buildDir}/generated/cluster"
 
-
             val clusterTemplate = addTemplate<ClusterTemplate>("clusterTemplate")
 
             afterEvaluate {

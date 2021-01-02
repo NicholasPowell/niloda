@@ -29,26 +29,15 @@ pluginManagement {
             if (requested.id.id == "com.nilo.NiloDependencies") {
                 useModule("com.nilo:dependency-management:0.0.1")
             }
-            if(requested.id.id == "com.nilo.AwsSam") {
-                useModule("com.nilo:aws-sam-plugin:0.0.1")
-            }
-            if(requested.id.id == "com.nilo.AwsCloudStack") {
-                useModule("com.nilo:aws-cloud-stack-plugin:0.0.1")
-            }
-            if(requested.id.id == "com.nilo.ContainerBoot") {
-                useModule("com.nilo:containerized-boot-plugin:0.0.1")
-            }
         }
     }
 }
 
-include("containerized-boot-plugin")
-include("containerized-boot-base")
-include("containerized-boot-test")
+include("niloda-container-boot-plugin")
 
-//val includeLocalDependencies = true
-//if( includeLocalDependencies ) {
-//includeBuild("../niloda-dependency-management")
-//}
+val includeLocalDependencies = true
+if( includeLocalDependencies ) {
+    includeBuild("../niloda-dependency-management")
+}
 
 rootProject.name = "niloda-container-boot"

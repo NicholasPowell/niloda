@@ -4,8 +4,8 @@ import org.gradle.api.Project
 
 object AddBootBaseDependency {
 
-    private const val pluginKey = "containerized-boot-plugin"
-    private const val baseKey = "containerized-boot-base"
+    private const val pluginKey = "niloda-container-boot-plugin"
+    private const val baseKey = "niloda-container-boot-base"
     private const val groupId = "com.nilo"
 
     operator fun invoke(project: Project) =

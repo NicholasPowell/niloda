@@ -1,6 +1,3 @@
-group = "com.nilo"
-version = "0.0.1"
-
 plugins {
     `maven-publish`
     `java-gradle-plugin`
@@ -25,9 +22,4 @@ gradlePlugin {
             implementationClass = "com.nilo.container.ContainerBootPlugin"
         }
     }
-}
-
-dependencies {
-    api(project(":containerized-boot-base"))
-//    implementation("com.palantir.gradle.docker:gradle-docker:0.25.0")
 }

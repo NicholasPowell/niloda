@@ -23,7 +23,6 @@ pluginManagement {
     }
     resolutionStrategy {
         eachPlugin {
-            println(requested.id)
             if (requested.id.id == "com.nilo.NiloDependencies") {
                 useModule("com.nilo:dependency-management:0.0.1")
             }
@@ -34,7 +33,7 @@ pluginManagement {
                 useModule("com.nilo:aws-cloud-stack-plugin:0.0.1")
             }
             if(requested.id.id == "com.nilo.ContainerBoot") {
-                useModule("com.nilo:containerized-boot-plugin:0.0.1")
+                useModule("com.nilo:niloda-container-boot-plugin:0.0.1")
             }
         }
     }

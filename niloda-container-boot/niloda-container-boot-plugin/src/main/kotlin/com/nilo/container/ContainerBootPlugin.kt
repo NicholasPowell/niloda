@@ -10,7 +10,7 @@ class ContainerBootPlugin : Plugin<Project> {
 
         RegisterContainerBootExtension(project)
         GenerateDockerFile(project)
-        AddBootBaseDependency(project)
+//        AddBootBaseDependency(project)
         RegisterDockerTasks(project)
 
     }
